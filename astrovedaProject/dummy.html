@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="dummy.css">
+    <style>
+        /* Ensure body and main content spacing */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main.banner {
+            flex: 1; /* Allow main content to grow and fill available space */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: black;
+            color: #e9d16f;
+            text-align: center;
+            padding: 1rem;
+            position: relative; /* Change from fixed to relative */
+        }
+
+        /* Adjust spacing below the main content to avoid overlapping */
+        body > main {
+            margin-bottom: 2rem; /* Add space below main content */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="header1">
+            <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+        </div>
+        <div id="header2" style="padding-right: 40px; margin-right: 100px;">
+            <h1><big>ASTROVEDA</big></h1>
+        </div>
+    </div>
+    <br /><br />
+
+    <main class="banner">
+        <h2 class="w3-center">We Value Your Feedback</h2>
+        <form id="feedbackForm" action="insertfeedback.php" method="post">
+            <div class="form-group">
+                <label for="customerEmail">Customer Email:</label>
+                <input type="email" id="custEmail" name="custEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="astrologerEmail">Astrologer Email:</label>
+                <input type="email" id="astrologerEmail" name="astrologerEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating (0-10):</label>
+                <input type="number" id="rating" name="rating" min="0" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="w3-button">Submit Feedback</button>
+        </form>
+    </main>
+    <footer>
+        <p>Powered by Astroveda</p>
+    </footer>
+</body>
+</html>

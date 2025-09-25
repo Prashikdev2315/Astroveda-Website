@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astroveda - User Type Selection</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        body {
+            background: linear-gradient(to bottom, #e9d16f, #e9d16f80);
+            min-height: 100vh;
+        }
+        .header {
+            background-color: black;
+            color: #e9d16f;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #header1 img {
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        
+        #header2 h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 15px;
+            padding-right: 479px; 
+            align-items: center; 
+            color: #e9d16f;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+        }
+        .auth-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        main {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .user-types {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .user-type {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .user-type:hover {
+            transform: translateY(-5px);
+        }
+        .user-type img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+        }
+        .user-type h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .user-type p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="header1">
+            <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+        </div>
+        <div id="header2" style="padding-right: 40px; margin-right: 100px;">
+            <h1><big>ASTROVEDA</big></h1>
+        </div>
+    </div>
+    <br /><br />
+
+    <main>
+        <div class="container">
+            <h1>Welcome to Astroveda</h1>
+            <p>Hey Astrologer! Select your options</p>
+
+            <div class="user-types">
+                <form action="astrologer-viewfeedback.html" method="get">
+                    <button type="submit" class="user-type">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e9d16f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E" alt="Moon icon" width="24" height="24">
+                        <h2>View Review and Feedback</h2>
+                        <p>View the reviews and feedbacks given to you by customers</p>
+                    </button>
+                </form>
+                <form action="astrologer-pooja.php" method="POST">
+                    <button type="submit" class="user-type">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e9d16f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E" alt="Moon icon" width="24" height="24">
+                        <h2>Check Appointments</h2>
+                        <p>Check and confirm appointments as requested by customers</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: black; color: #e9d16f; text-align: center; padding: 1rem; position: fixed; bottom: 0; width: 100%;">
+        <p>Powered by Astroveda</p>
+    </footer>
+    <script>
+        document.querySelector('footer p').style.color = '#e9d16f';
+    </script>
+</body>
+</html>

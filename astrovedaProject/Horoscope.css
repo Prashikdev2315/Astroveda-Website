@@ -1,0 +1,180 @@
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background: linear-gradient(to bottom, #e9d16f, #e9d16f80);
+    min-height: 100vh;
+}
+
+.header {
+    background-color: black;
+    color: #e9d16f;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header1 img {
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#header2 h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px;
+    padding-right: 479px; 
+    align-items: center; 
+}
+
+.navbar {
+    background-color: black;
+    color: #e9d16f;
+    padding: 0.5rem 1rem;
+    height: auto;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.Astrologer {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 4px solid #e9d16f;
+    overflow: hidden;
+    margin: 0;
+    margin-left:130px;
+    margin-right:10px;
+}
+
+.Astrologer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.k {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    transform: none;
+}
+
+/* Additional styles from astro.pdf */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.register-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #e9d16f;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: black;
+    color: #e9d16f;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+.auth-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+footer {
+    background-color: black;
+    color: #e9d16f;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.875rem;
+}

@@ -1,0 +1,17 @@
+# OS/system
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# PHP
+vendor/
+.env
+*.log
+
+# Node (if using frontend tools)
+node_modules/
+dist/
+build/

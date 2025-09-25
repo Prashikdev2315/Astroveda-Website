@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astroveda - Astrologer Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            background: linear-gradient(to bottom, #e9d16f, #e9d16f80);
+            min-height: 100vh;
+        }
+        .header {
+            background-color: black;
+            color: #e9d16f;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #header1 img {
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        
+        #header2 h1 {
+            font-size: 1.5rem;
+            color: #e9d16f;
+            font-weight: bold;
+            margin: 15px;
+            padding-right: 479px; 
+            align-items: center; 
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center; /* Center-align content */
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Center content horizontally */
+            padding: 2rem 1rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 1rem;
+        }
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 400px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            background-color: #e9d16f;
+            color: black;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: black;
+            color: #e9d16f;
+        }
+        .register-prompt {
+            margin-top: 1rem;
+            color: black;
+        }
+        .register-link {
+            color: black;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .register-link:hover {
+            color: #d9c15f;
+        }
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+        }
+        .auth-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="header1">
+            <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+        </div>
+        <div id="header2" style="padding-right: 40px; margin-right: 100px;">
+            <h1><big>ASTROVEDA</big></h1>
+        </div>
+    </div>
+    <br /><br />
+
+    <main>
+        <div class="container">
+            <h1>Astrologer Login</h1>
+            <form class="login-form" action="http://localhost/Astroveda/astrologer-login-check.php" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required aria-required="true">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p class="register-prompt">
+                Don't have an account? <a href="astrologer-register.html" class="register-link">Register Now!</a>
+            </p>
+        </div>
+    </main>
+    <footer style="background-color: black; color: #e9d16f; text-align: center; padding: 1rem; position: fixed; bottom: 0; width: 100%;">
+        <p>Powered by Astroveda</p>
+    </footer>
+    <script>
+        document.querySelector('footer p').style.color = '#e9d16f';
+    </script>
+</body>
+</html>

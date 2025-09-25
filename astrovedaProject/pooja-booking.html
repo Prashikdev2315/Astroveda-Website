@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Booking</title>
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        body {
+            background: linear-gradient(to bottom, #e9d16f, #e9d16f80);
+            min-height: 100vh;
+        }
+        .header {
+            background-color: black;
+            color: #e9d16f;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #header1 img {
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        
+        #header2 h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 15px;
+            padding-right: 479px; 
+            align-items: center; 
+            color: #e9d16f;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .auth-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+        }
+        .auth-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        main {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+        }
+        .form-container label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-container input, 
+        .form-container select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 20px; /* Rounded corners */
+            font-size: 1rem;
+        }
+        .form-container button {
+            background-color: #e9d16f;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 20px; /* Button with rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .form-container button:hover {
+            background-color: black;
+            color: #e9d16f;
+        }
+        footer {
+            background-color: black;
+            color: #e9d16f;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="header1">
+            <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+        </div>
+        <div id="header2" style="padding-right: 40px; margin-right: 100px;">
+            <h1><big>ASTROVEDA</big></h1>
+        </div>
+    </div>
+    <br />
+    <main>
+        <h1>Pooja Booking</h1>
+        <form class="form-container" action="http://localhost/Astroveda/astrovedaProject/pooja-booking-check.php" method="POST">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="pooja-type">Type of Pooja</label>
+            <select id="poojatype" name="poojatype" required>
+                <option value="" disabled selected>Select Pooja Type</option>
+                <option value="Ganesh Puja">Ganesh Puja</option>
+                <option value="Lakshmi Puja">Lakshmi Puja</option>
+                <option value="Durga Puja">Durga Puja</option>
+                <!-- Add more options as required -->
+            </select>
+
+            <label for="pooja-date">Date for Pooja</label>
+            <input type="date" id="poojadate" name="poojadate" required>
+
+            <label for="pooja-venue">Venue for Pooja</label>
+            <input type="text" id="poojavenue" name="poojavenue" placeholder="Enter Venue" required>
+
+            <button type="submit">Book</button>
+        </form>
+    </main>
+    <br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 Astrology Hub</p>
+    </footer>
+</body>
+</html>

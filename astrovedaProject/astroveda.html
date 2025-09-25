@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>Astroveda Homepage   </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="astrovedanew.css">
+    <style>
+
+        bodyP {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            margin: 0;
+            padding: 16px;
+        }
+        .containerP {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .card {
+            background-color: rgba(255, 224, 178, 0.8);
+            border: 2px solid #8b4513;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #8b4513;
+            color: #fff3e0;
+            padding: 12px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .button-groupP {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .buttonP {
+            background: none;
+            border: none;
+            color: #8b4513;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .info-group {
+            margin-top: 16px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #3e2723;
+        }
+        .info-value {
+            color: #5d4037;
+        }
+        .kundali-chart {
+            aspect-ratio: 1 / 1;
+            border: 2px solid #8b4513;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .kundali-cell {
+            border: 1px solid #8b4513;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        .planet-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .festival-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .festival-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .festival-name {
+            color: #3e2723;
+        }
+        .festival-days {
+            color: #8b4513;
+        }
+        .more-button {
+            width: 100%;
+            text-align: center;
+            color: #8b4513;
+            font-weight: 600;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+
+        .about-us{
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .about-us {
+            background-color: black;
+            color: white;
+            padding: 4rem 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        h3 {
+            color: #ffd700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffd700;
+        }
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e6c200;
+            color: black;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-8 {
+            margin-top: 2rem;
+        }
+        .outline-button {
+            display: inline-block;
+            background-color: transparent;
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .outline-button:hover {
+            background-color: #ffd700;
+            color: black;
+        
+        }
+    }
+              .feedback-button {
+            display: inline-block;
+            background-color: #ffd700; /* Golden color matching the theme */
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .feedback-button:hover {
+            background-color: #e6c200; /* Slightly darker shade for hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    
+
+    </style>
+    </head>
+    
+    <body> 
+        <div class="header">
+            <div id="header1">
+                <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+            </div>
+            <div id="header2" style="padding-right: 40px; margin-right: 100px;">
+                <h1><big>ASTROVEDA</big></h1>
+            </div>
+        </div>
+        <br /><br />
+    
+        <div class="profiles">
+            <div class="banner">
+                <h2 class="w3-center" style="margin-left: 250px;"><b>Astrologer Profiles </b></h2>
+                <div class="w3-content w3-display-container">
+                    <!-- Slide 1 -->
+                    <div class="mySlides" ;>
+                        <div style="display: grid; grid-template-columns: 200px 550px;"> 
+                            <div class="leftside"> 
+
+                            </div>
+                            <div> 
+                                <h3><b>Name:</b> Ambuj Gupta</h3>
+                                <p><b>Experience:</b> 8 Years</p>
+                                <p><b>Rating:</b> 5</p>
+                                <div class="description-header">Description</div>
+                                <div class="description-text">
+                                    "As a dedicated and compassionate astrologer with 8 years of experience, I offer insightful and personalized guidance to help you navigate life's challenges and unlock your full potential."
+                                </div>
+                        </div>
+                       
+                        </div>
+                        
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="mySlides">
+                        <div style="display: grid; grid-template-columns: 200px 550px;"> 
+                            <div class="leftside2"> 
+
+                            </div>
+                            <div> 
+                                <h3><b>Name:</b> Prashik Kapoor</h3>
+                            <p><b>Experience:</b> 3 Years</p>
+                            <p><b>Rating:</b> 4.5</p>
+                            <div class="description-header">Description</div>
+                            <div class="description-text">
+                                "Prashik specializes in Vedic astrology and offers solutions to improve personal and professional life. With 3 years of experience, he has helped many overcome obstacles."
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                       
+        
+                    <!-- Slide 3 -->
+                    <div class="mySlides">
+                        <div style="display: grid; grid-template-columns: 200px 550px;"> 
+                            <div class="leftside3"> </div>
+                            <div> 
+                                <h3><b>Name:</b> Akshat Shroff</h3>
+                            <p><b>Experience:</b> 5 Years</p>
+                            <p><b>Rating:</b> 4</p>
+                            <div class="description-header">Description</div>
+                            <div class="description-text">
+                                "Akshat has a strong background in numerology and helps clients make informed decisions based on astrological insights and calculations."
+                            </div>
+                            </div>
+                            </div>
+                        
+                    </div>
+        
+                    <!-- Slide 4 -->
+                    <div class="mySlides">
+                        <div style="display: grid; grid-template-columns: 200px 550px;"> 
+                            <div class="leftside1"> </div>
+                            <div> 
+                                <h3><b>Name:</b> Charith K</h3>
+                        <p><b>Experience:</b> 9 Years</p>
+                        <p><b>Rating:</b> 3</p>
+                        <div class="description-header">Description</div>
+                        <div class="description-text">
+                            "Charith has a diverse approach, combining astrology with spiritual insights to offer comprehensive advice, especially in relationships and career."
+                        </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+             </div>
+            
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+            
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+            
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = x.length }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+                    x[slideIndex - 1].style.display = "block";  
+                }
+            </script>
+
+        </div>
+        <br/> <br/>
+        
+        <center>  <h2 class="w3-center" style="padding-top: 100px; " ><b>Our Services</b></h2> </center>
+        <div class="services"> 
+            <div style=" padding-top: 30px; "> 
+                <div style="padding-left: 30px;"> 
+                    <img style="border-radius: 200px; border: 4px solid;" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiIFp926s_rNAAFpONPIpbHcvh1SnzErSgSA&s" class="a" width="200" height="200" hspace="30">
+                </div> 
+                <div style="padding-left: 25px;"> 
+                    <a href="Horoscope.html"><button style="font-size: 25px; margin-top: 21px; background-color: rgba(214, 183, 27, 0.689)"> <b> Daily Horoscope </b></button></a>
+                </div>
+            </div>
+            <div style=" padding-top: 30px; "> 
+                <div style="padding-left: 135px;"> 
+                     <img style="border-radius: 200px; border: 4px solid;" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxIjI5ZC6Cr30nCkHjgiAAG7aFkEKHJ8DdfQ&s" alt="button images" class="a" width="200" height="200" hspace="30">
+                </div> 
+               <center><div style="padding-left: 144px;"> 
+                   <a href="kundli.html"> <button style="font-size: 25px; margin-top: 21px; background-color: rgba(214, 183, 27, 0.689)"> <b> Kundli </b></button></a>
+                </div></center>
+            </div>
+            <div style=" padding-top: 30px; "> 
+                <div style="padding-left: 120px;"> 
+                    <img style="border-radius: 200px; border: 4px solid;" src= "https://thumbs.dreamstime.com/b/kalash-vector-illustration-coconut-leaf-pottery-84064298.jpg" class="a" width="200" height="200" hspace="30">
+                </div> 
+                <div style="padding-left: 130px;"> 
+                    <a href="pooja.html"><button style="font-size: 25px; margin-top: 21px; background-color: rgba(214, 183, 27, 0.689)"> <b> Pooja Booking </b></button></a>
+                </div>
+            </div>
+        </div>
+        <br/> <br/> <br/>
+        <center>  <h2 class="w3-center" ><b>Our Astrologers</b></h2> </center>
+        <div class="profile" style="margin-top: 50px;"> 
+            <div class="Astrologer1"> 
+                <a href="astrologers/astro3.html"><img src="https://content.jdmagicbox.com/v2/comp/bangalore/k9/080pxx80.xx80.120711125521.j8k9/catalogue/sri-anand-guruji-banashankari-3rd-stage-bangalore-astrologers-rpuxjm.jpg"></a>
+             </div>
+             <div class="Astrologer2"> 
+                <a href="astrologers/astro1.html"><img class="Astrologer2" src="https://www.varanasiastro.com/uploads/1/4/4/1/14411482/400534819.jpg"></a>
+             </div>
+             <div class="Astrologer3"> 
+                <a href="astrologers/astro2.html"><img class="Astrologer3" src="https://www.astromadhupriya.com/wp-content/uploads/2024/03/snapedit_1709528780804-e1709530195200-1024x951.png"></a>
+
+             </div>
+             <div class="Astrologer4"> 
+                <a href="http://localhost/Astroveda/astrovedaProject/astrologers/astro4.php"> <img class="Astrologer4" src="https://www.shutterstock.com/image-vector/add-new-plus-icon-vector-600nw-1910973697.jpg"></a>
+
+             </div>
+        </div>
+
+        <div> 
+            <br><br>
+            <center>  <h2 class="w3-center" style="padding-top: 50px; " ><b>Panchang</b></h2> </center>
+            <br><br>
+            <div class="containerP">
+                <div style="display: grid; grid-template-columns: 600px 600px;"> 
+                    <div> 
+                    
+                    <!-- Panchang for Today -->
+                    <div class="card" style="width: 500px; margin-left: 60px;">
+                       <center> <div class="card-header">Panchang for Today</div></center>
+                        <div class="card-content">
+                            <div class="button-group">
+                                <button class="button">12 Hour</button>
+                                <button class="button">24 Hour</button>
+                                <button class="button">24 Plus</button>
+                            </div>
+                            
+                            <h3 style="color: #3e2723; margin: 0;">New Delhi, India</h3>
+                            <p style="color: #5d4037; font-weight: 600; margin-top: 4px;">Sunday, December 1st, 2024</p>
+                            
+                            <div class="info-group">
+                                <div class="info-item">
+                                    <span class="info-label">Sunrise:</span>
+                                    <span class="info-value">06:56 AM</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Sunset:</span>
+                                    <span class="info-value">05:24 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Tithi:</span>
+                                    <span class="info-value">Chaturdashi upto 10:29 AM</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Nakshatra:</span>
+                                    <span class="info-value">Vishakha upto 12:35 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Yoga:</span>
+                                    <span class="info-value">Atiganda upto 04:45 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Karana:</span>
+                                    <span class="info-value">Shakuni upto 10:29 AM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="more-button">MORE</div>
+                        </div>
+                    </div>
+                            
+                    </div>
+                    <div> 
+                       <!-- Upcoming Upavas and Festivals -->
+                <div class="card" style="width: 500px;">
+                   <center> <div class="card-header">Upcoming Upavas and Festivals</div></center>
+                    <div class="card-content">
+                        <ul class="festival-list">
+                            <li class="festival-item">
+                                <span class="festival-name">Darsha Amavasya ------------> (Today)</span>
+                            </li>
+                            <li class="festival-item">
+                                <span class="festival-name">Margashirsha Amavasya ----> (1 Day)</span>
+                                
+                            </li>
+                            <li class="festival-item">
+                                <span class="festival-name">Anvadhan -----------------------> (1 Day)</span>
+        
+                            </li>
+                            <li class="festival-item">
+                                <span class="festival-name">World AIDS Day ---------------> (1 Day)</span>
+        
+                            </li>
+                            <li class="festival-item">
+                                <span class="festival-name">Ishti ------------------------------> (2 Day)</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="more-button">MORE</div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+
+        </div>
+<br><br>
+
+<div class="text-center mt-8">
+    <a href="dummy.html" class="feedback-button">
+        Feedback and Reviews
+    </a>
+</div>
+
+<br><br>
+
+<div class="about-us"> 
+    <section class="about-us">
+        <div class="container">
+            <h2>About Astroveda</h2>
+            <div class="grid">
+                <div>
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>
+                           
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            
+                            <a href="mailto:info@celestialvisions.com">info@astroveda.com</a>
+                        </li>
+                        <li>
+                    IIITDM Jabalpur    
+                          </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Follow Us</h3>
+                    <a href="https://www.instagram.com/astroveda" target="_blank" rel="noopener noreferrer">
+                        @astrovedavisions
+                    </a>
+                    <br>
+                </div>
+                <div>
+                    <h3>Help & Resources</h3>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/services">Our Services</a></li>
+                        <li><a href="/blog">Astrology Blog</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="outline-button">
+                    Need Help? Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+    </body>
+</html>
