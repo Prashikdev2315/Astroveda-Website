@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AstroVeda
 
 Pooja booking, Kundli generation, and Horoscope checking platform with separate **Customer** and **Astrologer** logins. Backend uses **PHP + MySQL** (XAMPP) with role-based access and booking workflows.
@@ -131,3 +132,6 @@ if ($conn->connect_error) {
 4. Update DB credentials in `conn.php`
 5. Access via `http://localhost/astrovedaProject/`
 
+=======
+# Astroveda-website
+>>>>>>> 03b0b19e86836ea51d067a4e105b4249ba495c77
